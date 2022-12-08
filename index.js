@@ -14,3 +14,11 @@ go.addEventListener("click", function () {
     text.classList.toggle("hidden");
   }
 });
+
+const menuToggle = document.querySelector(".nav-hamburger");
+const navList = document.querySelector(".nav-list");
+
+menuToggle.addEventListener("click", function () {
+  navList.classList.toggle("hidden");
+  console.log("clicked");
+});

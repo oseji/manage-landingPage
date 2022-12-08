@@ -7,11 +7,15 @@
 }
 
 .container {
-  @apply w-9/12 mx-auto p-4;
+  @apply w-11/12 lg:w-9/12 mx-auto p-4;
 }
 
 .text {
-  @apply text-slate-500 text-sm;
+  @apply text-slate-500 text-sm text-center lg:text-left;
+}
+
+.list-text {
+  @apply text-slate-500 text-sm text-left;
 }
 
 .btn {
@@ -20,7 +24,7 @@
 
 /*NAV*/
 .nav {
-  @apply flex justify-between  p-2 mb-20;
+  @apply flex justify-between px-10 py-4 mb-20;
 }
 
 .nav-logo {
@@ -28,7 +32,7 @@
 }
 
 .nav-list {
-  @apply flex justify-between mt-2 w-96 font-semibold text-sm;
+  @apply flex justify-between mt-2 w-96 font-semibold text-sm hidden lg:flex;
 }
 
 .nav-link-text {
@@ -37,48 +41,46 @@
 
 /*FIRST GROUP*/
 .first-group {
-  @apply flex justify-between;
+  @apply flex lg:justify-between flex-col lg:flex-row;
 }
 
-/*FIRST SECTION*/
 .first-section {
   @apply p-2;
 }
 
 .first-heading {
-  @apply text-4xl text-slate-800 font-bold mt-20 mb-10;
+  @apply text-4xl text-center lg:text-left text-slate-800 font-bold mt-20 mb-10;
 }
 
-/*IMAGE SECTION*/
 .image-section {
-  @apply ml-16;
+  @apply lg:ml-16;
 }
 
 /*SECOND GROUP*/
 .second-group {
-  @apply flex justify-between;
+  @apply flex justify-between flex-col lg:flex-row;
 }
 
 /*SECOND SECTION*/
 .second-section {
-  @apply p-2  mt-1 w-1/3;
+  @apply p-2  mt-1 lg:w-1/3;
 }
 
 .second-heading {
-  @apply text-3xl text-slate-800 font-bold mt-20 mb-10;
+  @apply text-3xl text-center lg:text-left text-slate-800 font-bold mt-20 mb-10;
 }
 
 /*LIST SECTION*/
 .list-section {
-  @apply p-2  ml-1 w-1/2;
+  @apply p-2  ml-1 lg:w-1/2;
 }
 
 .list-heading {
-  @apply font-bold text-slate-800 mt-2 ml-6;
+  @apply font-bold text-slate-800 mt-2 ml-2 lg:ml-6;
 }
 
 .number {
-  @apply px-6 py-2 rounded-full bg-orange-600 font-semibold text-white;
+  @apply px-6 py-2 h-12 rounded-full bg-orange-600 font-semibold text-white;
 }
 
 /*SCROLL CONTAINER*/
@@ -91,7 +93,7 @@
 }
 
 .card {
-  @apply p-4 mx-2 bg-slate-100 w-96 cursor-pointer;
+  @apply p-4 mx-2 bg-slate-100 w-10/12 cursor-pointer;
 }
 
 .card-image {
@@ -108,16 +110,20 @@
 
 /*THIRD CONTAINER*/
 .third-container {
-  @apply w-full mx-auto px-48 py-14 mt-32 grid grid-cols-2 bg-orange-600;
+  @apply lg:w-full  w-full  lg:px-48 py-14 mt-32 lg:grid lg:grid-cols-2 bg-orange-600;
 }
 
 .btn-get-started {
-  @apply bg-white ml-64 py-2 px-7 mt-5 rounded-3xl text-orange-600 font-semibold w-40 h-10;
+  @apply bg-white mx-auto block lg:ml-64 py-2 px-7 mt-5 rounded-3xl text-orange-600 font-semibold w-40 h-10;
 }
 
 /*LAST CONTAINER*/
 .last-container {
-  @apply w-full mx-auto px-48 py-10 grid grid-cols-5 bg-slate-900 text-gray-300;
+  @apply w-full mx-auto px-6 lg:px-60 py-10 flex flex-col-reverse lg:grid lg:grid-cols-4 bg-slate-900 text-gray-300;
+}
+
+.first-col {
+  @apply flex flex-col-reverse lg:flex-col justify-between;
 }
 
 .footer-img {

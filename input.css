@@ -24,7 +24,7 @@
 
 /*NAV*/
 .nav {
-  @apply flex justify-between px-3 lg:px-10 py-4 lg:mb-20 bg-orange-600 lg:bg-white;
+  @apply flex justify-between px-3 lg:px-10 py-4 lg:mb-20 /*bg-orange-600*/ lg:bg-white;
 }
 
 .nav-logo {
@@ -32,11 +32,15 @@
 }
 
 .nav-list {
-  @apply font-semibold text-sm justify-between mt-14 lg:mt-2 mr-20 lg:mr-0 lg:w-96  lg:flex;
+  @apply font-semibold text-sm justify-between bg-white shadow-xl lg:shadow-none py-6 px-14 lg:py-0 lg:px-0 mt-14 lg:mt-2 mr-20 lg:mr-0 lg:w-96  lg:flex rounded-md;
 }
 
 .nav-link-text {
-  @apply text-slate-800 hover:text-slate-500 transition ease-out duration-200;
+  @apply mb-5 text-center font-bold;
+}
+
+.nav-link {
+  @apply text-slate-900 hover:text-slate-600 transition ease-out duration-200;
 }
 
 .nav-hamburger {
@@ -45,7 +49,7 @@
 
 /*FIRST GROUP*/
 .first-group {
-  @apply flex lg:justify-between flex-col lg:flex-row;
+  @apply flex lg:justify-between flex-col-reverse lg:flex-row;
 }
 
 .first-section {
@@ -57,7 +61,7 @@
 }
 
 .image-section {
-  @apply lg:ml-16;
+  @apply lg:ml-16 h-auto;
 }
 
 /*SECOND GROUP*/

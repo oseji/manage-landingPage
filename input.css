@@ -19,7 +19,7 @@
 }
 
 .btn {
-  @apply bg-orange-600 py-2 px-7 rounded-3xl text-white font-semibold hover:shadow-orange-700 hover:shadow-lg transition ease-out duration-200;
+  @apply bg-orange-600 py-2 px-7 rounded-3xl text-white font-semibold  hover:shadow-orange-700  hover:shadow-lg transition ease-out duration-200;
 }
 
 /*NAV*/
@@ -32,7 +32,7 @@
 }
 
 .nav-list {
-  @apply font-semibold text-sm justify-between bg-white shadow-xl lg:shadow-none py-6 px-14 lg:py-0 lg:px-0 mt-14 lg:mt-2 mr-20 lg:mr-0 lg:w-96  lg:flex rounded-md;
+  @apply font-semibold text-sm justify-between shadow-xl rounded-md  lg:shadow-none   bg-white  py-6 px-14  lg:py-0  lg:px-0 mt-14  lg:mt-2  mr-16  lg:mr-0  lg:w-96  lg:flex;
 }
 
 .nav-link-text {
@@ -40,7 +40,7 @@
 }
 
 .nav-link {
-  @apply text-slate-900 hover:text-slate-600 transition ease-out duration-200;
+  @apply text-slate-900  hover:text-slate-600 transition ease-out duration-200;
 }
 
 .nav-hamburger {
@@ -57,7 +57,7 @@
 }
 
 .first-heading {
-  @apply text-4xl text-center lg:text-left text-slate-800 font-bold mt-20 mb-10;
+  @apply text-4xl text-center lg:text-left text-slate-800 font-bold  mt-20  mb-10;
 }
 
 .image-section {
@@ -75,7 +75,7 @@
 }
 
 .second-heading {
-  @apply text-3xl text-center lg:text-left text-slate-800 font-bold mt-20 mb-10;
+  @apply text-3xl text-center lg:text-left  text-slate-800 font-bold mt-20 mb-10;
 }
 
 /*LIST SECTION*/
@@ -84,7 +84,7 @@
 }
 
 .list-heading {
-  @apply font-bold text-slate-800 mt-2 ml-2 lg:ml-6;
+  @apply font-bold text-slate-800 mt-2 ml-2  lg:ml-6;
 }
 
 .number {
@@ -118,20 +118,20 @@
 
 /*THIRD CONTAINER*/
 .third-container {
-  @apply lg:w-full  w-full  lg:px-48 py-14 mt-32 lg:grid lg:grid-cols-2 bg-orange-600;
+  @apply bg-orange-600 lg:w-full  w-full  lg:px-48  py-14 mt-32  lg:grid  lg:grid-cols-2;
 }
 
 .btn-get-started {
-  @apply bg-white mx-auto block lg:ml-64 py-2 px-7 mt-5 rounded-3xl text-orange-600 font-semibold w-40 h-10;
+  @apply bg-white mx-auto block  rounded-3xl text-orange-600 font-semibold  lg:ml-64  py-2 px-7 mt-5 w-40 h-10;
 }
 
 /*LAST CONTAINER*/
 .last-container {
-  @apply w-full mx-auto px-6 lg:px-60 py-10 flex flex-col-reverse lg:grid lg:grid-cols-4 bg-slate-900 text-gray-300;
+  @apply w-full mx-auto px-6 lg:px-60 py-10 flex flex-col-reverse  lg:grid  lg:grid-cols-4 bg-slate-900 text-gray-300;
 }
 
 .first-col {
-  @apply flex flex-col-reverse lg:flex-col justify-between;
+  @apply flex flex-col-reverse  lg:flex-col justify-between;
 }
 
 .footer-img {

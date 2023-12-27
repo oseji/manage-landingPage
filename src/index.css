@@ -76,15 +76,23 @@ nav {
 }
 
 .reviewSection {
-  @apply w-auto overflow-x-scroll flex flex-row gap-8 items-center px-5 md:px-0 py-20;
+  @apply py-10;
+}
+
+.reviewsGrp {
+  @apply w-auto flex-nowrap overflow-x-auto flex flex-row gap-8 items-center px-5 md:px-0 py-20;
 }
 
 .reviewCard {
-  @apply relative flex flex-col items-center bg-slate-200 p-4 rounded-md w-full md:w-120;
+  @apply relative flex flex-none flex-col items-center bg-slate-100 p-4 rounded-md w-full md:w-120;
 }
 
 .reviewImg {
-  @apply h-10 md:h-16 relative bottom-12;
+  @apply h-10 md:h-16 absolute -top-5 lg:-top-7;
+}
+
+.reviewContent {
+  @apply pt-5 lg:pt-10;
 }
 
 .reviewerName {

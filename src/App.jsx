@@ -10,9 +10,6 @@ import facebookIcon from "./assets/icon-facebook.svg";
 import hamburgerMenu from "./assets/icon-hamburger.svg";
 import closeIcon from "./assets/icon-close.svg";
 import illustrationIntro from "./assets/illustration-intro.svg";
-import bgSimplifyDesktop from "./assets/bg-simplify-section-desktop.svg";
-import bgSimplifyMobile from "./assets/bg-simplify-section-mobile.svg";
-import bgTabletPattern from "./assets/bg-tablet-pattern.svg";
 import ali from "./assets/avatar-ali.png";
 import anisha from "./assets/avatar-anisha.png";
 import richard from "./assets/avatar-richard.png";
@@ -56,11 +53,20 @@ function App() {
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.8 } },
+    visible: { opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.6 } },
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 200 },
-    visible: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.8 } },
+    hidden: { opacity: 0, x: 200 },
+    visible: { opacity: 1, x: 0, transition: { delay: 0.3, duration: 0.6 } },
+  };
+
+  const reviewCardVariants = {
+    hidden: { opacity: 0, scale: 0.7 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.2 },
+    },
   };
 
   return (
@@ -112,7 +118,7 @@ function App() {
               Bring everyone together to build better products.
             </h1>
 
-            <p className="text text-center md:text-start">
+            <p className="text text-center md:text-start font-light">
               Manage makes it simple for software teams to plan day-to-day tasks
               while keeping the larger team goals in view.
             </p>
@@ -135,12 +141,12 @@ function App() {
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          className="sectionClass"
+          className="sectionClass overflow-x-hidden"
         >
           <div className="textSection">
             <h1 className="sectionHeading">What's different about manage?</h1>
 
-            <p className="text w-full md:w-10/12">
+            <p className="text w-full md:w-10/12 font-light">
               Manage provides all the functionality your team needs, without the
               complexity. Our software is tailor-made for modern digital product
               teams.
@@ -158,14 +164,12 @@ function App() {
                 <h1 className="featureHeading">Track company-wide progress</h1>
               </div>
 
-              <div className="featureContent">
-                <p className="text lg:ml-24">
-                  See how your day to day tasks fit into the wider vision. Go
-                  from tracking progress at the milestone level all the way down
-                  to the smallest level of details. Never lose sight of the
-                  bigger picture again.
-                </p>
-              </div>
+              <p className="featureContent text ">
+                See how your day to day tasks fit into the wider vision. Go from
+                tracking progress at the milestone level all the way down to the
+                smallest level of details. Never lose sight of the bigger
+                picture again.
+              </p>
             </motion.div>
 
             <motion.div
@@ -178,14 +182,12 @@ function App() {
                 <h1 className="featureHeading">Advanced built in reports</h1>
               </div>
 
-              <div className="featureContent">
-                <p className="text lg:ml-24">
-                  See how your day to day tasks fit into the wider vision. Go
-                  from tracking progress at the milestone level all the way down
-                  to the smallest level of details. Never lose sight of the
-                  bigger picture again.
-                </p>
-              </div>
+              <p className="featureContent text">
+                See how your day to day tasks fit into the wider vision. Go from
+                tracking progress at the milestone level all the way down to the
+                smallest level of details. Never lose sight of the bigger
+                picture again.
+              </p>
             </motion.div>
 
             <motion.div
@@ -200,26 +202,24 @@ function App() {
                 </h1>
               </div>
 
-              <div className="featureContent">
-                <p className="text lg:ml-24">
-                  See how your day to day tasks fit into the wider vision. Go
-                  from tracking progress at the milestone level all the way down
-                  to the smallest level of details. Never lose sight of the
-                  bigger picture again.
-                </p>
-              </div>
+              <p className="featureContent text">
+                See how your day to day tasks fit into the wider vision. Go from
+                tracking progress at the milestone level all the way down to the
+                smallest level of details. Never lose sight of the bigger
+                picture again.
+              </p>
             </motion.div>
           </div>
         </motion.section>
 
-        <motion.section
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          className="reviewSection"
-        >
+        <section className="reviewSection">
           <div className="reviewsGrp">
-            <div className="reviewCard">
+            <motion.div
+              className="reviewCard"
+              variants={reviewCardVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
               <img src={anisha} alt="profilePic" className="reviewImg" />
 
               <div className="reviewContent">
@@ -230,9 +230,14 @@ function App() {
                   doloremque quidem ipsa
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="reviewCard">
+            <motion.div
+              className="reviewCard"
+              variants={reviewCardVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
               <img src={ali} alt="profilePic" className="reviewImg" />
 
               <div className="reviewContent">
@@ -243,9 +248,14 @@ function App() {
                   doloremque quidem ipsa
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="reviewCard">
+            <motion.div
+              className="reviewCard"
+              variants={reviewCardVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
               <img src={richard} alt="profilePic" className="reviewImg" />
 
               <div className="reviewContent">
@@ -256,9 +266,14 @@ function App() {
                   doloremque quidem ipsa
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="reviewCard">
+            <motion.div
+              className="reviewCard"
+              variants={reviewCardVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
               <img src={shanai} alt="profilePic" className="reviewImg" />
 
               <div className="reviewContent">
@@ -269,23 +284,31 @@ function App() {
                   doloremque quidem ipsa
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <button className="getStartedBtn mt-5 mx-auto  block">
             Get started
           </button>
-        </motion.section>
+        </section>
 
         <motion.section
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          className="bg-[url('./assets/bg-simplify-section-mobile.svg')] md:bg-[url('./assets/bg-simplify-section-desktop.svg')]  flex flex-col md:flex-row justify-between items-center bg-brightRed p-10 md:p-20"
+          className="bg-[url('./assets/bg-simplify-section-mobile.svg')] md:bg-[url('./assets/bg-simplify-section-desktop.svg')] bg-no-repeat  flex flex-col md:flex-row justify-between items-center bg-brightRed p-10 md:p-20"
         >
-          <h1 className="text-4xl font-bold text-white text-center md:text-start md:w-1/2">
+          <motion.h1
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.7 },
+            }}
+            className="text-4xl font-bold text-white text-center md:text-start md:w-1/2"
+          >
             Simplify how your team works today
-          </h1>
+          </motion.h1>
 
           <button className=" rounded-full px-5 py-2 font-semibold bg-white text-sm mt-10 md:mt-0 text-brightRed hover:scale-110 transition ease-in-out duration-200;">
             Get started
@@ -324,13 +347,17 @@ function App() {
             </ul>
           </div>
 
-          <div className="footerInput">
+          <form className="footerInput">
             <input
-              type="text"
-              className="rounded-full text-black p-2 focus:outline-0"
+              type="email"
+              placeholder="Email address"
+              required
+              className="rounded-full text-black p-2 focus:outline-0 placeholder:text-sm placeholder:font-light"
             />
-            <button className="goBtn">Go</button>
-          </div>
+            <button className="goBtn" onClick={(e) => e.preventDefault()}>
+              Go
+            </button>
+          </form>
         </motion.footer>
       </main>
     </div>

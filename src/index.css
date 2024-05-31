@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* html {
+  @apply overflow-x-hidden;
+} */
+
+.App {
   @apply font-veitnam;
 }
 
@@ -64,7 +68,7 @@ nav {
 }
 
 .featureContainer {
-  @apply flex flex-row gap-5 md:gap-7 items-center mb-3;
+  @apply flex flex-row gap-2 md:gap-7 items-center mb-3;
 }
 
 .featureNum {
@@ -75,16 +79,24 @@ nav {
   @apply font-bold;
 }
 
+.featureContent {
+  @apply lg:ml-24 font-light text-sm;
+}
+
 .reviewSection {
-  @apply py-10;
+  @apply py-10 px-5 overflow-x-hidden;
 }
 
 .reviewsGrp {
-  @apply w-auto flex-nowrap overflow-x-auto flex flex-row gap-8 items-center px-5 md:px-0 py-20;
+  @apply w-auto flex-nowrap flex flex-row gap-8 items-center px-5 md:px-0 py-20 overflow-x-auto;
+}
+
+.reviewsGrp::-webkit-scrollbar {
+  display: none;
 }
 
 .reviewCard {
-  @apply relative flex flex-none flex-col items-center bg-slate-100 p-4 rounded-md w-full md:w-120;
+  @apply relative flex flex-none flex-col items-center bg-slate-100 p-4 rounded-md w-10/12 md:w-1/3 hover:scale-105 transition ease-in-out duration-150 cursor-default;
 }
 
 .reviewImg {
@@ -96,11 +108,11 @@ nav {
 }
 
 .reviewerName {
-  @apply capitalize font-semibold text-darkBlue text-center mb-2;
+  @apply capitalize font-bold text-darkBlue text-center mb-2;
 }
 
 footer {
-  @apply px-5 md:px-20 py-10 flex flex-col-reverse md:flex-row justify-between gap-7 md:gap-0 bg-slate-900 font-semibold items-start text-white;
+  @apply px-5 md:px-20 py-10 flex flex-col-reverse md:flex-row justify-between gap-7 md:gap-10 bg-slate-900 font-semibold items-start text-white;
 }
 
 .footerCol {

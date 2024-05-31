@@ -84,7 +84,7 @@ nav {
 }
 
 .reviewSection {
-  @apply py-10 px-5 overflow-x-hidden;
+  @apply py-10  overflow-x-hidden;
 }
 
 .reviewsGrp {
